@@ -11,12 +11,6 @@
 {{ include('partials/_navbar.html.twig') }}
 
 <div class="example-wrapper">
-    <h1>Hello {{ name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>C:/Users/amine/OneDrive/Bureau/projet_symfony/src/Controller/AmineController.php</code></li>
-        <li>Your template at <code>C:/Users/amine/OneDrive/Bureau/projet_symfony/templates/amine/index.html.twig</code></li>
-    </ul>
+    {{ form(bookForm) }}
 </div>
 {% endblock %}
