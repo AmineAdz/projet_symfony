@@ -2,16 +2,18 @@
 
 namespace App\Controller;
 
+use assets\app;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
-use Symfony\Component\Routing\Requirement\Requirement;
 
-class IndexController extends AbstractController
+class AmineController extends AbstractController
 {
-#[Route('/index/{name}', name: 'app_index' , requirements: ['name'=> '\d+'])]
+    #[Route('/amine/{name}', name: 'app_amine')]
     public function index(string $name = "Amine"): Response
     {
-        return new Response("hello ". $name . "...");
+        return $this->render('amine/index.html.twig', [
+            'name' => $name,
+        ]);
     }
 }
