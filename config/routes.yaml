@@ -7,3 +7,5 @@ controllers:
 #home_index:
     #path: /home
     #contrller: App\Controller\IndexController::home 
+    #Requirements:
+        #name: '\d+'
